@@ -1,0 +1,117 @@
+@font-face {font-family: 'demo';
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+@name1:kouhong;
+@name2:tushu;
+@name3:chuzu;
+@name4:zhuanshi;
+@name5:bao;
+@name6:shipin;
+@name7:muying;
+@name8:shuma;
+@name9:xiangbao;
+@name10:neiyi;
+@name11:nanzhuang;
+@name12:jinkou;
+@name13:guanzhu;
+@name14:saomiao;
+@name15:dianhua;
+@name16:youxiang;
+@name17:ardess;
+@name18:xiala;
+@name19:logo;
+@name20:flow;
+@name21:dianhua;
+@name22:youxiang;
+@name23:ardess;
+@name24:huazhuangp;
+@name25:qiche;
+@name26:jiafang;
+@name27:jiadian;
+@name28:yiyao;
+@name29:a;
+@name30:xiala;
+@name31:logo;
+@name32:flow;
+@name33:dianhua;
+@name34:dianhua;
+
+@con1:e600;
+@con2:e601;
+@con3:e602;
+@con4:e603;
+@con5:e604;
+@con6:e605;
+@con7:e606;
+@con8:e607;
+@con9:e608;
+@con10:e609;
+@con11:e610;
+@con12:e611;
+@con13:e612;
+@con14:e613;
+@con15:e614;
+@con16:e615;
+@con17:e616;
+@con18:e617;
+@con19:e618;
+@con20:e619;
+@con21:e620;
+@con22:e621;
+@con23:e60a;
+@con24:e60b;
+@con25:e60c;
+@con26:e60d;
+@con27:e60e;
+@con28:e60f;
+@con29:e61a;
+@con30:e61b;
+@con31:e61c;
+@con32:e61d;
+@con33:e61e;
+@con34:e61f;
+.for(@i:1) when (@i<=34){
+  @n:'name@{i}';
+  @n1:@@n;
+  @c:'con@{i}';
+  @c1:@@c;
+  *[data-role=@{n1}]:before{
+    font-family: demo;
+    content: "\@{c1}";
+  }
+  *[data-role=@{n1}][icon-pos=top]:before{
+    display:block;
+    font-family: demo;
+    content: "\@{c1}";
+    text-align: center;
+  }
+
+  *[data-role=@{n1}][icon-pos=right]:before {
+    font-family: demo;
+    content: "";
+  }
+  *[data-role=@{n1}][icon-pos=right]:after{
+    font-family: demo;
+    content: "\@{c1}";
+  }
+
+
+  *[data-role=@{n1}][icon-pos=bottom]:before {
+    font-family: demo;
+    content: "";
+  }
+  *[data-role=@{n1}][icon-pos=bottom]:after{
+    font-family: demo;
+    content: "\@{c1}";
+    display: block;
+  }
+  .for(@i+1);
+}
+
+.for();
